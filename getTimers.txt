@@ -1,0 +1,36 @@
+--> GET https://mysmob.prelive-api.connect.skoda-auto.cz/api/v1/vehicle-automatization/TMBZZZAAZLD800020/departure/timers?deviceDateTime=2024-04-05T14%3A02%3A43.315076%2B02%3A00
+traceparent: 00-835c0cfc0b9a4bb3a5c64c975225f90d-684cf8ced42341cc-00
+X-APP-VERSION-NAME: 7.2.0
+X-APP-VERSION-CODE: 240319002
+X-APP-PLATFORM: Android
+X-DEVICE-LANGUAGE: en
+X-DEVICE-COUNTRY: GB
+User-Agent: MySkoda/Android/7.2.0/240319002
+Authorization: Bearer eyJraWQiOiI0ODEyODgzZi05Y2FiLTQwMWMtYTI5OC0wZmEyMTA5Y2ViY2EiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI2ZTMzZGNlZi05OWQ5LTQ1NmQtOGViYi1iYjM0ZGExZTQ5MmIiLCJhdWQiOiI3ZjA0NWVlZS03MDAzLTQzNzktOTk2OC05MzU1ZWQyYWRiMDZAYXBwc192dy1kaWxhYl9jb20iLCJzY3AiOiJwcm9maWxlIGJhZGdlIGVtYWlsIGJpcnRoZGF0ZSBhZGRyZXNzIHBob25lIHZpbiBwcm9mZXNzaW9uIG5hdGlvbmFsSWRlbnRpZmllciBkcml2ZXJzTGljZW5zZSBjYXJzIGRlYWxlcnMgbWlsZWFnZSBvcGVuaWQgbWJiIiwiYWF0IjoiaWRlbnRpdHlraXQiLCJpc3MiOiJodHRwczovL2lkZW50aXR5LnZ3Z3JvdXAuaW8iLCJqdHQiOiJhY2Nlc3NfdG9rZW4iLCJleHAiOjE3MTIzMjE1NzIsImlhdCI6MTcxMjMxNzk3MiwibGVlIjpbIlNLT0RBIl0sImp0aSI6IjQyZmZlMWRhLTc1YTQtNDViYy04OTgzLTUxOGYxZTNjNDg1MCJ9.RzlWaxRHx9HlB8FHdPpvYCkJ56TYvRnQN7h54b91azkl42L_xeO7u5aEUy8rt9432aF0nSYHPk14QfgxaJVXXkwIiUy_Hi1tnyWQWYYiTsRdK0cLK9Un_ZP_pH4jgii8Ybycw4E_9vqtrNMeKY2IvyU6LH6TYqR_qLuMvg8N3kMag-2GTidKhMd4rkhHQaLkUnGQWJ4iyPuMywKLuhshypy4XguAbVVc33TONdtoI6eIXTE94ztE8F49At4JP3erkXKLXu4PVOq6Cvtgia0Q7KKSm3u7qkwll-pjroQftaUpcIRAOsPGVxVVGQpZFkWO9QBKKVFfzSpxR5QSrN2mdZVbUsmcjcxHyw0bICChNSN-bf0voGsq6Z_eLZdG0zkJCzmdX7W_vRsC5uI-X9hqNAOA3pY-h8LmypFkp0iPtkdRTtZlSSgkteSzloZL-HX_7nj4cYGwO_0YTPxsen6tDj08Z9v3LZXZ_GYgNaGTJpNy4cORGepY9dDA9GEYdgwr_2tQmakadSy-LP-9soepgQveEq-cj6XheFGulpAJbrzUBUot7RwaPHLOs_KSFBhbK6NBCHPNK-ZNusX6bEPuQhp_QSVfPzpLqG_et731VYrTPlS6vWSdbgmQtcAVXf_SPmTkMd7JD_Rju_bRVuNJmZyenxHgP4uDPYo9qWvZGCs
+X-DEMO-MODE: false
+
+
+--> END
+<-- 200 https://mysmob.prelive-api.connect.skoda-auto.cz/api/v1/vehicle-automatization/TMBZZZAAZLD800020/departure/timers?deviceDateTime=2024-04-05T14%3A02%3A43.315076%2B02%3A00 (917ms)
+content-type: application/json
+content-length: 90
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+x-content-type-options: nosniff
+strict-transport-security: max-age=31536000 ; includeSubDomains
+x-frame-options: DENY
+x-xss-protection: 0
+referrer-policy: no-referrer
+traceid: 835c0cfc0b9a4bb3a5c64c975225f90d
+date: Fri, 05 Apr 2024 12:02:49 GMT
+
+{
+    "targetTemperature": {
+        "celsius": 17.5,
+        "fahrenheit": 63,
+        "unitInCar": "CELSIUS"
+    },
+    "timers": []
+}
+<-- END HTTP (90-byte body)
