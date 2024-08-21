@@ -1,0 +1,13 @@
+# Lokální konfigurační soubor pro Nette framework.
+# Zde se uvádějí nastavení, které pak dále nechcete distribuovat třeba v rámci Gitu např. Vaše přihlašovací údaje k lokální databázi.
+
+parameters:
+    dbname: crg_v1 # název databáze
+
+# Konfigurace databázové služby dále přístupné pomocí DI v rámci celé aplikace.
+database:
+	dsn: 'mysql:host=127.0.0.1;dbname=%dbname%'
+	user: root # uživatel
+	password: Alma+0053- # heslo
+	options:
+		lazy: yes

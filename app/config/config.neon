@@ -1,0 +1,97 @@
+# Globální konfigurační soubor pro Nette framework.
+parameters:
+	# Role.
+	guest: guest
+	authenticated: authenticated
+	member: member
+	admin: admin
+	adminer: adminer
+
+	# Presentery.
+	error: Error
+
+# Časová zóna.
+php:
+	date.timezone: Europe/Prague
+
+# Nastavení aplikace.
+application:
+	# Presenter pro zpracování vyjímek a chyb aplikace.
+	errorPresenter: %error%
+
+	# Přesměrovat výjimky přímo už na ErrorPresenter, jinak jdou standartně na laděnku. (Hodí se obzvláště při debuggování ErrorPresentetu.)
+	catchExceptions: true # Může mít i hodnotu `yes`.
+
+	# Standartní mapování cesty k prezenterům. (Dá se i pozměnit, ale ne všechna nastavení jsou podporována.)
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+# Aktivuje panel pro DI v Debugger baru.
+di:
+	debugger: true
+
+# Nastavení sessions v rámci celé aplikace.
+session:
+	expiration: 14 days
+	debugger: true
+
+# Nastavení společných rolí v rámci celé aplikace pomocí statického ACL.
+security:
+	roles:
+		guest:
+		member: [guest]
+		authenticated: [member]
+		admin: [member]
+		adminer: [member]
+
+# Nastavení výchozích chybových hlášek pro formuláře.
+forms:
+	messages:
+		REQUIRED: 'Povinné pole.'
+
+# Nastavení vlastních služeb dále přístupných pomocí DI v rámci celé aplikace.
+services:
+	router: App\RouterFactory::createRouter # Nastavení routeru aplikace.
+	authenticator: App\Model\UserManager # Nastavení přihlašování do aplikace.
+	#cache.storage: Nette\Caching\Storages\DevNullStorage
+	security.authorizator: # Nastavení zdrojů a pravidel přístupu k nim v rámci celé aplikace pomocí statického ACL.
+		setup:
+			- addResource(%error%)
+			- allow(%guest%, %error%)
+			- allow(%admin%)
+			- allow(%adminer%)
+
+	# Nastavení dalších služeb v rámci celé aplikace dále přístupných pomocí DI.
+	- Symfony\Component\EventDispatcher\EventDispatcher
+
+# Vložení konfiguračních souborů z jednotlivých modulů.
+includes:
+	- ../CoreModule/config/config.neon
+
+extensions:
+#    console: Kdyby\Console\DI\ConsoleExtension
+#    facebook: Contributte\Facebook\DI\Nette\FacebookExtension
+
+
+#console:
+#    commands:
+#        - App\Console\RunBackupCommand
+#        - App\Console\RunMinuteCommand
+#        - App\Console\RunHourCommand
+#        - App\Console\RunDayCommand
+#        - App\Console\RunMonthCommand
+
+#facebook:
+#    appId: "411778086343549"
+#    appSecret: "ccca266446633e001db93501ed610145"
+
+mail:
+	# použije SmtpMailer
+	smtp: true       # (bool) výchozí je false
+
+	host: 37.157.193.15        # (string)
+	port: 8080        # (int)
+	username: petr@fialkovi.cz    # (string)
+	password: Alma+0053-    # (string)
+	timeout: 300     # (int)
+	secure: null      # (ssl|tls|null) výchozí je null
