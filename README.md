@@ -1,1 +1,1 @@
-The first repo
+Czech Republic guide
